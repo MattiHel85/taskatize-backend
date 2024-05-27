@@ -1,7 +1,9 @@
 export interface Task {
     id: string;
+    name: string;
     description: string;
     assignedTo: string; // User ID of the child
-    completed: boolean;
-    approved: boolean;
+    priority: 'high' | 'medium' | 'low';
+    isCompleted: boolean;
+    isApproved: boolean;
 }

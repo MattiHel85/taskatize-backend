@@ -17,7 +17,7 @@ export const approveTask = (req: Request, res: Response) => {
     const { taskId } = req.params;
     const task = tasks.find(t => t.id === taskId);
     if (task) {
-        task.approved = true;
+        task.isApproved = true;
         res.json(task);
     } else {
         res.status(404).json({ message: 'Task not found' });
